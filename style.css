@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5efe6, #e8d5c4);
+    color: #3e2c23;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(62, 44, 35, 0.95);
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+
+.subtitle {
+    color: #a47148;
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.hero-text p {
+    line-height: 1.7;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #a47148, #7f5539);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+.hero-img img {
+    width: 320px;
+    border-radius: 20px;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-text { animation-delay: 0.3s; }
+.hero-img { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img {
+        margin-top: 30px;
+    }
+}
+.presentation-new {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+/* LEFT */
+.presentation-new .left {
+    max-width: 400px;
+}
+
+.presentation-new h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+/* RIGHT */
+.presentation-new .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* BOXES */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box h2 {
+    color: #7f5539;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
