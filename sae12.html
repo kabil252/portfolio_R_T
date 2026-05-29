@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE12 - Nada</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sae-container">
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="logo">
+            Nada KABIL
+        </div>
+
+        <nav class="main-navbar">
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="profil.html">
+                Profil
+            </a>
+
+            <a href="projet.html" class="active">
+                projets
+            </a>
+
+            <a href="Bilan des compétences.html">
+                Bilan des compétences
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="sae-banner sae12-banner">
+
+    </section>
+
+    <!-- PAGE -->
+
+    <section class="sae-page">
+
+        <!-- INTRODUCTION -->
+
+        <div class="project-box">
+
+            <h2>Introduction</h2>
+
+            <p>
+                Cette SAÉ avait pour objectif de découvrir les bases des réseaux
+                informatiques et l’administration des services réseau sous Linux.
+                Durant ce projet, j’ai travaillé sur la configuration réseau,
+                le protocole DHCP ainsi que l’installation d’un serveur NGINX.
+            </p>
+
+        </div>
+    <!-- APPRENTISSAGES CRITIQUES -->
+
+        <div class="project-box">
+
+            <h2>Apprentissages Critiques (AC)</h2>
+
+            <ul class="ac-list">
+
+                <li>
+                    AC11.03 — Configurer les fonctions de base du réseau local
+                </li>
+
+                <li>
+                    AC11.04 — Maîtriser les systèmes d’exploitation
+                </li>
+
+                <li>
+                    AC11.05 — Identifier les dysfonctionnements réseau
+                </li>
+
+                <li>
+                    AC11.06 — Installer et configurer un poste client
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- REALISATION -->
+
+        <div class="project-box">
+
+            <h2>Réalisation</h2>
+
+            <p>
+                J’ai utilisé une machine virtuelle Debian afin de réaliser
+                plusieurs manipulations réseau.
+                J’ai configuré l’interface réseau, effectué des tests de connexion
+                et utilisé différentes commandes Linux pour analyser les problèmes.
+            </p>
+
+        </div>
+
+        <!-- DHCP -->
+
+        <div class="project-box">
+
+            <h3> Preuve 1: DHCP</h3>
+
+            <h2>Configuration du serveur DHCP</h2>
+
+            <p>
+                Durant cette SAÉ, j’ai configuré un serveur DHCP sur Debian
+                afin de distribuer automatiquement des adresses IP
+                aux différentes machines du réseau.
+            </p>
+
+            <p>
+                Après la configuration du serveur et du poste client,
+                plusieurs tests ont été réalisés
+                pour vérifier le bon fonctionnement du réseau.
+            </p>
+
+            <!-- PROBLEME DHCP -->
+
+            <h2>Problème rencontré</h2>
+
+            <h3>Le poste client ne recevait plus d’adresse IP automatiquement</h3>
+
+            <p>
+                Pendant les tests réseau,
+                le poste client ne recevait plus automatiquement
+                d’adresse IP depuis le serveur DHCP.
+            </p>
+
+            <p>
+                En utilisant la commande :
+                <strong>ip a</strong>,
+                aucune adresse IPv4 valide n’apparaissait
+                sur l’interface réseau du client.
+            </p>
+
+            <img src="/Images/IP A dhcp.png"
+                alt="Adresse IP absente"
+                class="trace-img">
+
+            <p>
+                Cette situation indiquait que le poste client
+                ne communiquait plus correctement avec le serveur DHCP.
+            </p>
+
+            <!-- ANALYSE -->
+
+            <h3>Analyse du problème</h3>
+
+            <p>
+                Afin de comprendre l’origine du problème,
+                j’ai vérifié l’état du service DHCP
+                sur le serveur Debian.
+            </p>
+
+            <p>
+                La commande :
+                <strong>systemctl status isc-dhcp-server</strong>
+                montrait que le service était arrêté.
+            </p>
+
+            <img src="/Images/dhcp failed.png"
+                alt="DHCP arrêté"
+                class="trace-img big-trace-img">
+
+            <p>
+                Le problème provenait donc du serveur DHCP,
+                qui ne distribuait plus les paramètres réseau
+                aux machines clientes.
+            </p>
+
+            <img src="/Images/configuration l'interface.png"
+                alt="Configuration interface"
+                class="trace-img big-trace-img">
+
+            <!-- RESOLUTION -->
+
+            <h3>Résolution du problème</h3>
+
+            <p>
+                Pour corriger cette erreur,
+                j’ai modifié les paramètres
+                de configuration du serveur DHCP.
+            </p>
+
+            <p>
+                J’ai ensuite vérifié l’interface réseau utilisée
+                ainsi que les informations présentes
+                dans le fichier de configuration DHCP.
+            </p>
+
+            <img src="/Images/dhcp conf.png"
+                alt="Configuration DHCP"
+                class="trace-img">
+
+            <p>
+                Après les modifications,
+                le service DHCP a été redémarré
+                afin d’appliquer la nouvelle configuration.
+            </p>
+
+            <img src="/Images/dhcp active.png"
+                alt="DHCP actif"
+                class="trace-img big-trace-img">
+
+            <!-- RESULTAT -->
+
+            <h3>Résultat obtenu</h3>
+
+            <p>
+                Après renouvellement de la configuration réseau
+                du poste client,
+                une adresse IP valide a été attribuée automatiquement
+                par le serveur DHCP.
+            </p>
+
+            <img src="/Images/ip reussi dhcp.png"
+                alt="Adresse IP attribuée"
+                class="trace-img">
+
+        </div>
+
+        <!-- NGINX -->
+
+        <div class="project-box">
+
+            <h3> Preuve 2 : NGINX</h3>
+
+            <h2>Découverte et analyse de NGINX</h2>
+
+            <p>
+                Durant cette SAÉ, j’ai découvert le serveur web NGINX
+                sous Linux. Le serveur NGINX permet d’héberger des
+                services web et de répondre aux requêtes HTTP des clients.
+            </p>
+
+            <!-- INSTALLATION -->
+
+            <h2>Mise en place du serveur web NGINX</h2>
+
+            <p>
+                J’ai installé le serveur web NGINX sur Debian
+                puis vérifié son installation avec la commande :
+                <strong>sudo nginx -v</strong>.
+            </p>
+
+            <img src="/Images/nginx-version.png"
+                alt="Version NGINX"
+                class="trace-img">
+
+            <!-- PROBLEME -->
+
+            <h2>Problème rencontré avec NGINX</h2>
+
+            <p>
+                Après avoir arrêté le service NGINX,
+                le serveur web ne fonctionnait plus.
+                La commande <strong>systemctl</strong>
+                montrait que le service était inactif.
+            </p>
+
+            <p>
+                Comme le service NGINX était arrêté,
+                aucun processus n’écoutait sur le port 80,
+                ce qui empêchait l’accès au site web.
+            </p>
+
+            <p>
+                Lorsque j’ai essayé d’accéder au site web
+                avec localhost, le navigateur affichait
+                une erreur de connexion refusée.
+            </p>
+
+            <img src="/Images/nginx-site-inaccessible.png"
+                alt="Erreur localhost"
+                class="trace-img">
+
+            <!-- ANALYSE -->
+
+            <h2>Analyse du problème</h2>
+
+            <p>
+                Pour analyser le problème,
+                j’ai utilisé la commande :
+                <strong>systemctl status nginx</strong>.
+            </p>
+
+            <p>
+                La commande indiquait que le service
+                était dans l’état
+                <strong>inactive (dead)</strong>,
+                ce qui expliquait pourquoi
+                le site localhost était inaccessible.
+            </p>
+
+            <img src="/Images/nginx inactive.png"
+                alt="Analyse NGINX"
+                class="trace-img">
+
+            <!-- RESOLUTION -->
+
+            <h2>Résolution du problème</h2>
+
+            <p>
+                Pour résoudre le problème,
+                j’ai redémarré le service NGINX
+                avec la commande :
+                <strong>sudo systemctl restart nginx</strong>.
+            </p>
+
+            <p>
+                Ensuite, j’ai vérifié que le service
+                était bien actif et en cours d’exécution.
+            </p>
+
+            <div class="double-images">
+
+                <img src="/Images/nginx-active.png"
+                    alt="NGINX actif"
+                    class="trace-img">
+
+                <img src="/Images/Welcome to nginx.jpeg"
+                    alt="NGINX fonctionne"
+                    class="trace-img">
+
+            </div>
+
+            <p>
+                Enfin, la commande
+                <strong>ss -tulpn | grep nginx</strong>
+                a confirmé que NGINX écoutait
+                correctement sur le port 80 en TCP.
+            </p>
+
+            <img src="/Images/port 80.png"
+                alt="Port 80 NGINX"
+                class="trace-img">
+
+        </div>
+
+
+
+        <!-- AUTOEVALUATION -->
+
+        <div class="project-box">
+
+            <h2>Autoévaluation</h2>
+
+            <p>
+                Cette SAÉ m’a permis de mieux comprendre le fonctionnement
+                des réseaux informatiques sous Linux.
+                J’ai appris à analyser un problème réseau, utiliser des commandes
+                de diagnostic et corriger une erreur de configuration.
+                J’ai aussi découvert le fonctionnement du protocole DHCP
+                et du serveur web NGINX.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
