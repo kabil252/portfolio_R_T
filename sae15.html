@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE15 - Nada</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sae-container">
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="logo">
+            Nada KABIL
+        </div>
+
+        <nav class="main-navbar">
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="profil.html">
+                Profil
+            </a>
+
+            <a href="projet.html" class="active">
+                Projets
+            </a>
+
+            <a href="Bilan des compétences.html">
+                Bilan des compétences
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- BANNER -->
+
+   <section class="sae-banner sae15-banner">
+
+</section>
+    <!-- PAGE -->
+
+    <section class="sae-page">
+
+        <!-- INTRODUCTION -->
+
+<div class="project-box">
+
+    <h2>Introduction</h2>
+
+    <p>
+        Cette SAÉ avait pour objectif de développer
+        un programme Python permettant de récupérer
+        des données OpenStreetMap grâce à l’API Overpass.
+    </p>
+
+    <p>
+        Le programme générait automatiquement
+        des fichiers Markdown, JSON et HTML
+        contenant des informations géographiques
+        sur différents lieux de la ville de Caen.
+    </p>
+
+    <p>
+        Durant les tests du projet,
+        plusieurs erreurs Python et problèmes
+        de traitement des données ont été rencontrés
+        puis corrigés.
+    </p>
+
+</div>
+
+<!-- APPRENTISSAGES CRITIQUES -->
+
+<div class="project-box">
+
+    <h2>Apprentissages Critiques (AC)</h2>
+
+    <ul class="ac-list">
+
+        <li>
+            AC11.01 — Utiliser un système informatique et ses outils
+        </li>
+
+        <li>
+            AC11.02 — Lire, exécuter et corriger un programme
+        </li>
+
+        <li>
+            AC11.03 — Produire et traiter des données avec python
+        </li>
+
+        <li>
+            AC11.04 — Comprendre le fonctionnement d’une API
+        </li>
+
+
+    </ul>
+
+</div>
+
+<!-- REALISATION -->
+
+<div class="project-box">
+
+    <h2>Réalisation</h2>
+
+    <p>
+        Durant cette SAÉ,
+        j’ai utilisé Python afin de récupérer
+        des données géographiques depuis l’API Overpass.
+    </p>
+
+    <p>
+        Le programme permettait ensuite
+        de générer automatiquement
+        des fichiers Markdown, JSON et HTML
+        contenant différentes informations
+        sur les cafés de la ville de Caen.
+    </p>
+
+</div>
+
+<!-- PREUVE 1 -->
+
+<div class="project-box">
+
+    <h3>Preuve 1 : Traitement des données API</h3>
+
+    <h2>Récupération des données OpenStreetMap</h2>
+
+    <p>
+        Durant cette partie du projet,
+        le programme Python utilisait l’API Overpass
+        afin de récupérer automatiquement
+        des données OpenStreetMap.
+    </p>
+
+    <p>
+        Les données récupérées étaient ensuite
+        converties en fichiers JSON et HTML
+        pour afficher les informations géographiques.
+    </p>
+
+    <!-- PROBLEME -->
+
+    <h2>Problème rencontré</h2>
+
+    <h3>Erreur lors du traitement des données API</h3>
+
+    <p>
+        Pendant l’exécution du programme Python,
+        une erreur empêchait le traitement correct
+        des données récupérées depuis l’API.
+    </p>
+
+    <p>
+        Le script rencontrait un problème
+        lors de la lecture des données JSON.
+    </p>
+
+    <img src="/Images/sae 15 api is not defined.png"
+        alt="Erreur API Python"
+        class="trace-img">
+
+    <!-- ANALYSE -->
+
+    <h3>Analyse du problème</h3>
+
+    <p>
+        Après vérification du programme,
+        j’ai constaté que le problème
+        provenait du traitement des données JSON
+        récupérées depuis l’API OpenStreetMap.
+    </p>
+
+    <p>
+        Le script utilisait la fonction :
+        <strong>response.json()</strong>
+        afin de convertir les données API.
+    </p>
+
+    <p>
+        Une erreur empêchait donc
+        l’interprétation correcte des données JSON.
+    </p>
+
+    <!-- RESOLUTION -->
+
+    <h3>Résolution du problème</h3>
+
+    <p>
+        Pour corriger cette erreur,
+        j’ai vérifié et corrigé
+        le traitement des données JSON
+        dans le programme Python.
+    </p>
+
+    <p>
+        Après correction,
+        les données ont été récupérées correctement
+        et les fichiers HTML ont été générés sans erreur.
+    </p>
+
+    <img src="/Images/sae 15 python succès .png"
+        alt="Succès génération HTML"
+        class="trace-img">
+
+    <!-- RESULTAT -->
+
+    <h3>Résultat obtenu</h3>
+
+    <p>
+        Après correction du programme,
+        les fichiers HTML, JSON et Markdown
+        ont été générés correctement.
+    </p>
+
+</div>
+
+<!-- PREUVE 2 -->
+
+<div class="project-box">
+
+    <h3>Preuve 2 : Conversion Markdown vers HTML</h3>
+
+    <h2>Conversion automatique des fichiers HTML</h2>
+
+    <p>
+        Le programme Python utilisait également
+        une fonction permettant de convertir
+        automatiquement les fichiers Markdown
+        en fichiers HTML.
+    </p>
+
+    <!-- PROBLEME -->
+
+    <h2>Problème rencontré</h2>
+
+    <h3>Erreur lors de l’appel de la fonction Python</h3>
+
+    <p>
+        Pendant les tests du script Python,
+        une erreur apparaissait lors
+        de la génération du fichier HTML.
+    </p>
+
+    <p>
+        Python ne reconnaissait pas
+        la fonction utilisée pour effectuer
+        la conversion Markdown vers HTML.
+    </p>
+
+    <img src="/Images/sae 15 converst is not defined.png"
+        alt="Erreur fonction Python"
+        class="trace-img">
+
+    <!-- ANALYSE -->
+
+    <h3>Analyse du problème</h3>
+
+    <p>
+        Après analyse du script Python,
+        j’ai constaté qu’une faute
+        était présente dans le nom
+        de la fonction de conversion.
+    </p>
+
+    <p>
+        La fonction appelée dans le programme
+        ne correspondait pas au nom réel
+        de la fonction définie dans le module Python.
+    </p>
+
+    <!-- RESOLUTION -->
+
+    <h3>Résolution du problème</h3>
+
+    <p>
+        Pour corriger cette erreur,
+        j’ai remplacé le mauvais nom
+        de fonction par le nom correct
+        dans le script Python.
+    </p>
+
+    <p>
+        Après correction,
+        le programme a pu générer correctement
+        les fichiers HTML.
+    </p>
+
+    <img src="/Images/sae 15 python succès .png"
+        alt="Conversion HTML réussie"
+        class="trace-img">
+
+    <!-- RESULTAT -->
+
+    <h3>Résultat obtenu</h3>
+
+    <p>
+        Après correction du script,
+        la conversion Markdown vers HTML
+        fonctionnait correctement
+        sans aucune erreur Python.
+    </p>
+
+</div>
+
+<!-- AUTOEVALUATION -->
+
+<div class="project-box">
+
+    <h2>Autoévaluation</h2>
+
+    <p>
+        Cette SAÉ m’a permis de mieux comprendre
+        le fonctionnement des scripts Python,
+        le traitement des données JSON
+        ainsi que l’utilisation des API
+        dans un projet backend.
+    </p>
+
+    <p>
+        J’ai également appris à analyser
+        les erreurs Python,
+        corriger un programme
+        et tester le bon fonctionnement
+        d’un script automatisé.
+    </p>
+
+</div>
