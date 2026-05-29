@@ -1,0 +1,240 @@
+   <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAE1.01 - Nada</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            Nada KABIL
+        </div>
+
+        <nav>
+
+            <a href="index.html">Accueil</a>
+
+            <a href="profil.html">Profil</a>
+
+            <a href="projet.html" class="active">
+                Projets
+            </a>
+
+            <a href="Bilan des compétences.html">Bilan des compétences</a>
+
+        </nav>
+
+    </header>
+
+    <!-- PAGE -->
+
+    <section class="project-page">
+
+        <!-- BANNER -->
+
+        <div class="sae-banner">
+
+            <div class="sae-banner-content">
+
+                <h1>SAÉ1.01</h1>
+
+                <p>
+                    Se sensibiliser à l’hygiène informatique
+                    et à la cybersécurité
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- INTRODUCTION -->
+
+        <div class="project-box">
+
+            <h2>Introduction</h2>
+
+            <p>
+                Cette SAÉ avait pour objectif de découvrir les bases
+                de l’hygiène informatique et de la cybersécurité.
+                Nous avons travaillé en groupe sur le protocole SSH
+                et les connexions sécurisées à distance.
+            </p>
+
+            <p>
+                Le projet consistait à comprendre le fonctionnement
+                de SSH, ses avantages par rapport à Telnet
+                et les mécanismes de sécurité utilisés.
+            </p>
+
+        </div>
+
+
+            <!-- AC -->
+
+        <div class="project-box">
+
+            <h2>Apprentissages Critiques (AC)</h2>
+
+            <ul class="ac-list">
+
+                <li>
+                    AC11.03 :
+                    Configurer les fonctions de base
+                    d’un réseau local lors des manipulations SSH.
+                </li>
+
+                <li>
+                    AC11.04 :
+                    Comprendre les principes fondamentaux
+                    des systèmes Linux et utiliser des commandes
+                    pour administrer une machine virtuelle.
+                </li>
+
+                <li>
+                    AC11.05 :
+                    Identifier un problème réseau,
+                    analyser son origine
+                    et proposer une solution adaptée.
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- REALISATION -->
+
+        <div class="project-box">
+
+            <h2>Réalisation</h2>
+
+            <p>
+                Nous avons commencé par effectuer des recherches
+                sur le protocole SSH et son fonctionnement.
+                Ensuite, nous avons réalisé plusieurs manipulations
+                sous Linux afin de tester les connexions sécurisées.
+            </p>
+
+            <p>
+                J’ai participé à la recherche des informations,
+                à la préparation des supports
+                et aux manipulations sur machine virtuelle.
+            </p>
+
+            <h3>Pourquoi utiliser SSH ?</h3>
+
+            <img src="/Images/ssh 2.png" alt="Pourquoi SSH" class="trace-img">
+
+            <h3>
+                Fonctionnement de l’authentification SSH
+            </h3>
+
+            <img src="/Images/ssh.png" alt="Authentification SSH" class="trace-img">
+
+        </div>
+
+        <!-- PREUVE 1 -->
+
+        <div class="project-box">
+
+            <h3>Preuve 1 : Problème SSH</h3>
+
+            <h2>Problème rencontré</h2>
+
+            <p>
+                Lors des manipulations SSH,
+                la machine affichait le message :
+                <strong>“Network is unreachable”</strong>.
+            </p>
+
+            <p>
+                Ce problème empêchait l’établissement
+                de la connexion SSH entre les machines.
+            </p>
+
+            <img src="/Images/image 1.png" alt="Erreur SSH" class="trace-img">
+
+            <!-- ANALYSE -->
+
+            <h2>Analyse du problème</h2>
+
+            <p>
+                Pour analyser le problème,
+                j’ai vérifié la configuration réseau
+                de la machine avec la commande Linux
+                <strong>ip a</strong>.
+            </p>
+
+            <p>
+                Cette commande a permis de vérifier
+                l’adresse IP de la machine
+                ainsi que l’état des interfaces réseau.
+            </p>
+
+            <p>
+                La configuration réseau de la machine n’était pas correcte,
+                ce qui empêchait la communication entre les machines virtuelles.
+            </p>
+
+            <img src="/Images/image 2.png" alt="Adresse IP Linux" class="trace-img">
+
+            <!-- RESOLUTION -->
+
+            <h2>Résolution du problème</h2>
+
+            <p>
+                Après avoir identifié le problème réseau,
+                j’ai utilisé la bonne adresse IP
+                pour établir la connexion SSH.
+            </p>
+
+            <p>
+                La connexion a été réalisée avec la commande :
+                <strong>ssh utilisateur@adresse-ip</strong>.
+            </p>
+
+            <p>
+                Après validation de la clé de sécurité
+                et saisie du mot de passe,
+                la connexion SSH a fonctionné correctement.
+            </p>
+
+            <img src="/Images/image 3.png" alt="Connexion SSH réussie" class="trace-img">
+
+        </div>
+
+
+
+        <!-- AUTOEVALUATION -->
+
+        <div class="project-box">
+
+            <h2>Autoévaluation</h2>
+
+            <p>
+                Cette SAÉ m’a permis de découvrir le protocole SSH
+                et de mieux comprendre la cybersécurité sous Linux.
+                J’ai appris à analyser un problème réseau,
+                utiliser des commandes Linux
+                et établir une connexion sécurisée.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
